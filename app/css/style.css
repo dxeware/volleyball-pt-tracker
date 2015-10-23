@@ -1,0 +1,58 @@
+body {
+  font-family: 'Lucida Grande', Verdana, sans-serif;
+  color: darkblue;
+  background-color: white;
+}
+
+.points-background {
+  padding: 1em 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 60em;
+}
+
+.points-background h1 {
+  text-align: center;
+  margin-top: 1em;
+  font-size: 2em;
+}
+
+h1 {
+  margin: 0.5em auto;
+}
+
+.menu {
+  height: auto;
+  width: 20em;
+  font-size: 20px;
+  text-align: center;
+  margin: 1em auto;
+  padding: 0.5em auto;
+}
+
+a {
+  text-decoration: none;
+  color: darkblue;
+}
+
+.active {
+    text-decoration: none;
+    color: hotpink;
+    font-weight: bold;
+}
+
+.container {
+  background-color: #fffff8;
+  padding: 1em 0;
+  width: 50%;
+  margin: auto;
+  border: 5px ridge #779299;
+}
+
+.home {
+  text-align: center;
+  margin: auto;
+  font-size: 22px;
+  font-weight: bold;
+  color: black;
+}
