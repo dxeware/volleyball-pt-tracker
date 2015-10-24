@@ -47,8 +47,8 @@ a {
 }
 
 button {
-  transform:scale(1.8, 3);
-  -webkit-transform: scale(1.8, 3);
+  transform:scale(1.8, 2.5);
+  -webkit-transform: scale(1.8, 2.5);
   margin: auto 1em;
 }
 
@@ -64,6 +64,7 @@ button {
 }
 
 .team-heading {
+  margin-bottom: 0;
   font-size: 28px;
 }
 
