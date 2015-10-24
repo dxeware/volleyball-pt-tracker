@@ -41,6 +41,19 @@ a {
     font-weight: bold;
 }
 
+.points-input {
+  width: 3em;
+  font-size: 20px;
+}
+
+.game-heading {
+  font-size: 20px;
+}
+
+span {
+  font-size: 16px;
+}
+
 .container {
   background-color: #fffff8;
   padding: 1em 0;
