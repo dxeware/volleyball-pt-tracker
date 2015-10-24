@@ -46,6 +46,12 @@ a {
   font-size: 20px;
 }
 
+button {
+  transform:scale(2, 2);
+  -webkit-transform: scale(2,2);
+  margin: auto 1em;
+}
+
 .check {
   transform:scale(2, 2);
   -webkit-transform: scale(2,2);
@@ -53,6 +59,11 @@ a {
 }
 
 .game-heading {
+  font-size: 34px;
+  font-weight: bold;
+}
+
+.team-heading {
   font-size: 28px;
 }
 

@@ -9,11 +9,12 @@
 <body>
   <h1>Volleyball Point Tracker</h1>
   <section ng-controller="Game1Ctrl">
-    <span class="game-heading">Game 1 Valley</span>
+    <span class="game-heading">--Game 1--</span><br>
+    <span class="team-heading">Valley</span>
     <input class="points-input" type="number" maxlength="4" ng-model="gameInfo.homeScore">
     <button class="btn-primary" ng-click="adjustHomeScore(1)">+</button>
     <button class="btn-primary" ng-click="adjustHomeScore(-1)">-</button>
-    <span class="game-heading">Opponent<span>
+    <span class="team-heading">Opponent<span>
     <input class="points-input" type="number" maxlength="4" ng-model="gameInfo.opponentScore">
     <button class="btn-primary" ng-click="adjustOpponentScore(1)">+</button>
     <button class="btn-primary" ng-click="adjustOpponentScore(-1)">-</button>
@@ -26,12 +27,12 @@
 
   </section>
   <section ng-controller="Game2Ctrl">
-    <span class="game-heading">Game 2</span><br>
-    <span class="game-heading">Valley</span>
+    <span class="game-heading">--Game 2--</span><br>
+    <span class="team-heading">Valley</span>
     <input class="points-input" type="number" maxlength="4" ng-model="gameInfo.homeScore">
     <button class="btn-primary" ng-click="adjustHomeScore(1)">+</button>
     <button class="btn-primary" ng-click="adjustHomeScore(-1)">-</button>
-    <span class="game-heading">Opponent<span>
+    <span class="team-heading">Opponent<span>
     <input class="points-input" type="number" maxlength="4" ng-model="gameInfo.opponentScore">
     <button class="btn-primary" ng-click="adjustOpponentScore(1)">+</button>
     <button class="btn-primary" ng-click="adjustOpponentScore(-1)">-</button>
