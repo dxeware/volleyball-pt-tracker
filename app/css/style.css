@@ -47,8 +47,8 @@ a {
 }
 
 button {
-  transform:scale(1.6, 3);
-  -webkit-transform: scale(1.6, 3);
+  transform:scale(1.8, 3);
+  -webkit-transform: scale(1.8, 3);
   margin: auto 1em;
 }
 
