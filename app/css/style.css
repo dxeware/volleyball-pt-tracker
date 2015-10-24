@@ -46,6 +46,11 @@ a {
   font-size: 20px;
 }
 
+.check {
+  transform:scale(2, 2);
+  margin-top: 0;
+}
+
 .game-heading {
   font-size: 36px;
 }
