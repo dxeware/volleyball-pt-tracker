@@ -6,8 +6,9 @@
   <link rel="stylesheet" href="./app/css/style.css">
 </head>
 <body>
-  <section class="points-background">
-    <h1>Volleyball Point Tracker</h1>
+  <h1>Volleyball Point Tracker</h1>
+  <!-- <section class="points-background">
+
     <div class="menu">
       <a data-ui-sref="home" data-ui-sref-active="active">Home</a>
       <span> | </span>
@@ -18,12 +19,44 @@
       <a data-ui-sref="game3" data-ui-sref-active="active">Game 3</a>
     </div>
     <div class="page" data-ui-view></div>
+  </section> -->
+  <section ng-controller="Game1Ctrl">
+      <span>Game 1<span><span>  Valley<span>
+      <input type="number" maxlength="4" ng-model="gameInfo.homeScore">
+      <button class="btn-primary" ng-click="adjustHomeScore(1)">+</button>
+      <button class="btn-primary" ng-click="adjustHomeScore(-1)">-</button>
+      <span>Opponent<span>
+      <input type="number" maxlength="4" ng-model="gameInfo.opponentScore">
+      <button class="btn-primary" ng-click="adjustOpponentScore(1)">+</button>
+      <button class="btn-primary" ng-click="adjustOpponentScore(-1)">-</button>
+      <br>
+
+      <ul data-ng-repeat="player in gameInfo.players">
+        <li><span class="check"><input type="checkbox" data-ng-model="player.playing"></span><span> {{player.number}} {{player.name}} - points = {{player.points}} </span><span class="check"><input type="checkbox" data-ng-model="player.served"> SERVED</span>
+        </li>
+      </ul>
+
+  </section>
+  <section ng-controller="Game2Ctrl">
+      <span>Game 2<span><span>  Valley<span>
+      <input type="number" maxlength="4" ng-model="gameInfo.homeScore">
+      <button class="btn-primary" ng-click="adjustHomeScore(1)">+</button>
+      <button class="btn-primary" ng-click="adjustHomeScore(-1)">-</button>
+      <span>Opponent<span>
+      <input type="number" maxlength="4" ng-model="gameInfo.opponentScore">
+      <button class="btn-primary" ng-click="adjustOpponentScore(1)">+</button>
+      <button class="btn-primary" ng-click="adjustOpponentScore(-1)">-</button>
+      <br>
+
+      <ul data-ng-repeat="player in gameInfo.players">
+        <li><span class="check"><input type="checkbox" data-ng-model="player.playing"></span><span> {{player.number}} {{player.name}} - points = {{player.points}} </span><span class="check"><input type="checkbox" data-ng-model="player.served"> SERVED</span>
+        </li>
+      </ul>
+
   </section>
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.2/angular.min.js"></script>
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.js"></script>
+  <!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.js"></script> -->
   <script type="text/javascript" src="./app/app.module.js"></script>
-  <script type="text/javascript" src="./app/app.config.js"></script>
-  <script type="text/javascript" src="./app/home/home.controller.js"></script>
   <script type="text/javascript" src="./app/game/game.controller.js"></script>
 </body>
 </html>
