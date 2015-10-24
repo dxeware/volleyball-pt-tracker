@@ -42,13 +42,13 @@ a {
 }
 
 .points-input {
-  width: 2em;
+  width: 1.5em;
   font-size: 20px;
 }
 
 button {
-  transform:scale(1.5, 1.5);
-  -webkit-transform: scale(1.5,1.5);
+  transform:scale(1.5, 2);
+  -webkit-transform: scale(1.5,2);
   margin: auto 1em;
 }
 
