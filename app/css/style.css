@@ -53,11 +53,15 @@ a {
 }
 
 .game-heading {
-  font-size: 36px;
+  font-size: 28px;
 }
 
 span {
-  font-size: 24px;
+  font-size: 28px;
+}
+
+.served {
+  margin-left: 1em;
 }
 
 .container {
