@@ -85,14 +85,20 @@ function Game1Ctrl($scope) {
   $scope.adjustHomeScore = function(increment) {
     $scope.gameInfo.homeScore += increment;
 
-    updatePlayerPoints($scope, increment);
+    // Only increment if its a lead score point
+    if ($scope.gameInfo.homeScore > $scope.gameInfo.opponentScore) {
+      updatePlayerPoints($scope, increment);
+    }
 
   };
 
   $scope.adjustOpponentScore = function(increment) {
     $scope.gameInfo.opponentScore += increment;
 
-    updatePlayerPoints($scope, increment);
+    // Only increment if its a lead score point
+    if ($scope.gameInfo.opponentScore > $scope.gameInfo.homeScore) {
+      updatePlayerPoints($scope, increment);
+    }
 
   };
 }
@@ -174,64 +180,24 @@ function Game2Ctrl($scope) {
   $scope.adjustHomeScore = function(increment) {
     $scope.gameInfo.homeScore += increment;
 
-    updatePlayerPoints($scope, increment);
+    // Only increment if its a lead score point
+    if ($scope.gameInfo.homeScore > $scope.gameInfo.opponentScore) {
+      updatePlayerPoints($scope, increment);
+    }
 
   };
 
   $scope.adjustOpponentScore = function(increment) {
     $scope.gameInfo.opponentScore += increment;
 
-    updatePlayerPoints($scope, increment);
+    // Only increment if its a lead score point
+    if ($scope.gameInfo.opponentScore > $scope.gameInfo.homeScore) {
+      updatePlayerPoints($scope, increment);
+    }
 
   };
 }
 
-/*
-
-function GameCtrl($location, GameService) {
-  var vm = this;
-
-  var game = {
-    players
-  }
-  vm.players = players;
-  vm.test = 0;
-
-  var service = GameService;
-
-  // Map $location.path to Service and url
-  // for current store database
-  switch ( $location.path() ) {
-    case '/game1':
-      vm.homeScore = game1HomeScore;
-      vm.opponentScore = game1OpponentScore;
-      break;
-    case '/game2':
-      vm.homeScore = game2HomeScore;
-      vm.opponentScore = game2OpponentScore;
-      break;
-    case '/game3':
-      vm.homeScore = game3HomeScore;
-      vm.opponentScore = game3OpponentScore;
-      break;
-  }
-
-  vm.adjustHomeScore = function(increment) {
-    vm.homeScore += increment;
-    vm.test++;
-
-    updatePlayerPoints(vm, increment);
-
-  };
-
-  vm.adjustOpponentScore = function(increment) {
-    vm.opponentScore += increment;
-
-    updatePlayerPoints(vm, increment);
-
-  };
-}
-*/
 angular.module('vbPointTracker')
         .controller( 'Game1Ctrl', Game1Ctrl )
         .controller( 'Game2Ctrl', Game2Ctrl );
