@@ -69,7 +69,6 @@ function resetGameInfo (gameInfo) {
   gameInfo.opponentScore = 0;
 }
 
-
 function updatePlayerPoints (game, increment) {
   for (var i = 0; i < game.gameInfo.players.length; i++) {
     if ( game.gameInfo.players[i].playing === true ) {

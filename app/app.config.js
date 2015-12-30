@@ -8,16 +8,13 @@ config.$inject = ['$routeProvider'];
 
 function config($routeProvider) {
 
-  $routeProvider.when('/', {
-    templateUrl : 'app/game/game1.html',
-    controller : 'Game1Ctrl',
-  }).when('/game1', {
+  $routeProvider.when('/game1', {
     templateUrl : 'app/game/game1.html',
     controller : 'Game1Ctrl',
   }).when('/game2', {
     templateUrl : 'app/game/game2.html',
     controller : 'Game2Ctrl',
   })
-  .otherwise({redirectTo: '/game'});
+  .otherwise({redirectTo: '/game1'});
 
 }
