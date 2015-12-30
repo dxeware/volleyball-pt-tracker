@@ -118,6 +118,18 @@ footer {
   clear: left;
 }
 
+.check {
+  transform:scale(2, 2);
+  -webkit-transform: scale(2,2);
+  margin-top: 0;
+}
+
+.served {
+  float: right;
+  margin-left: 1em;
+}
+
+
 .content a:link, .content a:visited,
 .content a:active {
   text-decoration: none;
