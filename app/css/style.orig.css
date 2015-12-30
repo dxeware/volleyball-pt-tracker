@@ -55,7 +55,7 @@ header p {
 }
 
 section {
-  padding: 0 2rem;
+  padding: 1rem 2rem;
   font-size: 1.5rem;
 }
 
@@ -65,7 +65,7 @@ div {
 
 ul {
   padding: 0 1rem;
-  list-style-type: none;
+  list-style-type: square;
 }
 
 p {
@@ -99,13 +99,9 @@ footer {
   background-color: #A5B4AC;
 }
 
-.welcome {
-  text-align: center;
-}
-
 .container {
-  padding: 0.5rem 1rem;
-  margin: 0.5rem 1rem;
+  padding: 1rem 1rem;
+  margin: 1rem 2rem;
   background-color: #ffffee; /* off white */
 }
 
@@ -134,8 +130,4 @@ footer {
 
 a:hover  {
   color: #353F5E;
-}
-
-a:target {
-  background-color: #A5B4AC;
 }

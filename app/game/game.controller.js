@@ -165,6 +165,7 @@ function Game2Ctrl($scope) {
 }
 
 angular.module('vbPointTracker')
+        .config(config)
         .controller( 'Game1Ctrl', Game1Ctrl )
         .controller( 'Game2Ctrl', Game2Ctrl );
 

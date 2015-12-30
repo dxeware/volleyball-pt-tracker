@@ -3,52 +3,33 @@
 <head>
   <meta charset="UTF-8">
   <title>VB Point Tracker</title>
-  <link rel="stylesheet" href="./app/css/style.css">
+  <link rel="stylesheet" type="text/css" href="./app/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="./app/css/style.css">
   <meta name="viewport" content="width=600, initial-scale=1.0">
 </head>
 <body>
-  <h1>Volleyball Point Tracker</h1>
-  <section ng-controller="Game1Ctrl">
-    <div><span class="game-heading">--Game 1--</span><br>
-    <button class="btn-primary" ng-click="reset()">Reset</button>
-    <span class="team-heading">Valley</span>
-    <input class="points-input" type="number" maxlength="4" ng-model="gameInfo.homeScore">
-    <button class="btn-primary" ng-click="adjustHomeScore(1)">+</button>
-    <button class="btn-primary" ng-click="adjustHomeScore(-1)">-</button>
-    <span class="team-heading">Other<span>
-    <input class="points-input" type="number" maxlength="4" ng-model="gameInfo.opponentScore">
-    <button class="btn-primary" ng-click="adjustOpponentScore(1)">+</button>
-    <button class="btn-primary" ng-click="adjustOpponentScore(-1)">-</button></div>
-    <br>
+  <main>
+    <header>
+      <nav class="navbar">
+        <div class="navbar-header">
+          <span>Volleyball Point Tracker</span>
+        </div>
+        <div>
+          <ul class="nav navbar-nav">
+            <li><a id="/game1" href="#/game1">Game 1</a></li>
+            <li><a id="/game2" href="#/game2">Game 2</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
 
-    <ul data-ng-repeat="player in gameInfo.players">
-      <li><span><input class="check"type="checkbox" data-ng-model="player.playing"></span><span> {{player.number}} {{player.name}} - points = {{player.points}} </span><span class="served"><input class="check" type="checkbox" data-ng-model="player.served"> SERVED</span>
-      </li>
-    </ul>
+    <section ng-view></section>
 
-  </section>
-  <section ng-controller="Game2Ctrl">
-    <span class="game-heading">--Game 2--</span><br>
-    <button class="btn-primary" ng-click="reset()">Reset</button>
-    <span class="team-heading">Valley</span>
-    <input class="points-input" type="number" maxlength="4" ng-model="gameInfo.homeScore">
-    <button class="btn-primary" ng-click="adjustHomeScore(1)">+</button>
-    <button class="btn-primary" ng-click="adjustHomeScore(-1)">-</button>
-    <span class="team-heading">Other<span>
-    <input class="points-input" type="number" maxlength="4" ng-model="gameInfo.opponentScore">
-    <button class="btn-primary" ng-click="adjustOpponentScore(1)">+</button>
-    <button class="btn-primary" ng-click="adjustOpponentScore(-1)">-</button>
-    <br>
-
-    <ul data-ng-repeat="player in gameInfo.players">
-      <li><span><input class="check" type="checkbox" data-ng-model="player.playing"></span><span>  {{player.number}} {{player.name}} - points = {{player.points}} </span><span class="served"><input class="check" type="checkbox" data-ng-model="player.served">  SERVED</span>
-      </li>
-    </ul>
-
-  </section>
+  
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.2/angular.min.js"></script>
-  <!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.js"></script> -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0-beta.2/angular-route.js"></script>
   <script type="text/javascript" src="./app/app.module.js"></script>
+  <script type="text/javascript" src="./app/app.config.js"></script>
   <script type="text/javascript" src="./app/game/game.controller.js"></script>
 </body>
 </html>

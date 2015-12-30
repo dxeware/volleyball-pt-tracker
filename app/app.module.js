@@ -1,4 +1,4 @@
 "use strict";
 
 // angular.module setter
-angular.module('vbPointTracker', []);
+angular.module('vbPointTracker', ['ngRoute']);
