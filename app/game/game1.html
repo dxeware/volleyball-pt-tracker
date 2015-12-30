@@ -7,13 +7,13 @@
       </div>
       <div>
         <span class="team-heading">Valley</span>
-        <input class="points-input" type="number" maxlength="4" ng-model="gameInfo.homeScore">
+        <span class="points">{{gameInfo.homeScore}}</span>
         <button class="btn-primary" ng-click="adjustHomeScore(1)">+</button>
         <button class="btn-primary" ng-click="adjustHomeScore(-1)">-</button>
       </div>
       <div>
-        <span class="team-heading">Other</span>
-        <input class="points-input" type="number" maxlength="4" ng-model="gameInfo.opponentScore">
+        <span class="team-heading">    Other</span>
+        <span class="points">{{gameInfo.opponentScore}}</span>
         <button class="btn-primary" ng-click="adjustOpponentScore(1)">+</button>
         <button class="btn-primary" ng-click="adjustOpponentScore(-1)">-</button>
       </div>

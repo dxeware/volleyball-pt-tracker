@@ -7,7 +7,6 @@ body {
 .content {
   padding-top: 8rem;
   margin-top: 0;
-
 }
 
 header {
@@ -116,6 +115,16 @@ footer {
 
 .clear {
   clear: left;
+}
+
+.points {
+  background-color: #DBE4C9;
+  height: 4rem;
+  width: 4rem;
+  font-size: 18px;
+  padding: 10px 20px;
+  margin: auto 10px;
+  border: 1px solid black;
 }
 
 .check {
