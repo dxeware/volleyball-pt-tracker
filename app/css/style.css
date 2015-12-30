@@ -119,8 +119,8 @@ footer {
 }
 
 .check {
-  transform:scale(2, 2);
-  -webkit-transform: scale(2,2);
+  transform:scale(1, 1);
+  -webkit-transform: scale(1,1);
   margin-top: 0;
 }
 
