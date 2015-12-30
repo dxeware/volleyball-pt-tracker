@@ -78,90 +78,81 @@ function updatePlayerPoints (game, increment) {
   }
 }
 
+function initializeGame($scope, gameNum) {
+  $scope.gameInfo = {};
+
+  if (null === JSON.parse( localStorage.getItem( gameNum ) ) ) {
+    resetGameInfo($scope.gameInfo);
+  } else {
+   $scope.gameInfo = JSON.parse( localStorage.getItem( gameNum ) );
+  }
+}
+
+function reset($scope, gameNum) {
+  resetGameInfo($scope.gameInfo);
+  localStorage.setItem( gameNum, JSON.stringify( $scope.gameInfo ) );
+}
+
+function adjustHome($scope, gameNum, increment) {
+  $scope.gameInfo.homeScore += increment;
+
+  // Only increment if its a lead score point
+  if ($scope.gameInfo.homeScore > $scope.gameInfo.opponentScore) {
+    updatePlayerPoints($scope, increment);
+  }
+  localStorage.setItem( gameNum, JSON.stringify( $scope.gameInfo ) );
+}
+
+function adjustOpponent($scope, gameNum, increment) {
+  $scope.gameInfo.opponentScore += increment;
+
+  // Only increment if its a lead score point
+  if ($scope.gameInfo.opponentScore > $scope.gameInfo.homeScore) {
+    updatePlayerPoints($scope, increment);
+  }
+  localStorage.setItem( gameNum, JSON.stringify( $scope.gameInfo ) );
+}
+
 Game1Ctrl.$inject = ['$scope'];
 
 function Game1Ctrl($scope) {
-  //var game1 = this;
 
-  $scope.gameInfo = {};
+  var gameNum = 'game1';
 
-  if (null === JSON.parse( localStorage.getItem( "game1" ) ) ) {
-    resetGameInfo($scope.gameInfo);
-  } else {
-   $scope.gameInfo = JSON.parse( localStorage.getItem( "game1" ) );
-   //console.log(JSON.parse( localStorage.getItem( "game1" ) ) );
-  }
+  initializeGame($scope, gameNum);
 
   $scope.reset = function() {
-    resetGameInfo($scope.gameInfo);
-    localStorage.setItem( "game1", JSON.stringify( $scope.gameInfo ) );
-  }
+    reset($scope, gameNum); 
+  };
 
   $scope.adjustHomeScore = function(increment) {
-    $scope.gameInfo.homeScore += increment;
-
-    // Only increment if its a lead score point
-    if ($scope.gameInfo.homeScore > $scope.gameInfo.opponentScore) {
-      updatePlayerPoints($scope, increment);
-    }
-    localStorage.setItem( "game1", JSON.stringify( $scope.gameInfo ) );
-    //console.log(JSON.parse( localStorage.getItem( "game1" ) ) );
-
+    adjustHome($scope, gameNum, increment); 
   };
 
   $scope.adjustOpponentScore = function(increment) {
-    $scope.gameInfo.opponentScore += increment;
-
-    // Only increment if its a lead score point
-    if ($scope.gameInfo.opponentScore > $scope.gameInfo.homeScore) {
-      updatePlayerPoints($scope, increment);
-    }
-    localStorage.setItem( "game1", JSON.stringify( $scope.gameInfo ) );
-    //console.log(JSON.parse( localStorage.getItem( "game1" ) ) );
-
-  };
+    adjustOpponent($scope, gameNum, increment); 
+  }; 
 }
 
 Game2Ctrl.$inject = ['$scope'];
 
 function Game2Ctrl($scope) {
-  //var game1 = this;
+  
+  var gameNum = 'game2';
 
-  $scope.gameInfo = {};
-
-  if (null === JSON.parse( localStorage.getItem( "game2" ) ) ) {
-    resetGameInfo($scope.gameInfo);
-  } else {
-   $scope.gameInfo = JSON.parse( localStorage.getItem( "game2" ) );
-   //console.log(JSON.parse( localStorage.getItem( "game2" ) ) );
-  }
+  initializeGame($scope, gameNum);
 
   $scope.reset = function() {
-    resetGameInfo($scope.gameInfo);
-    localStorage.setItem( "game2", JSON.stringify( $scope.gameInfo ) );
-  }
+    reset($scope, gameNum); 
+  };
 
   $scope.adjustHomeScore = function(increment) {
-    $scope.gameInfo.homeScore += increment;
-
-    // Only increment if its a lead score point
-    if ($scope.gameInfo.homeScore > $scope.gameInfo.opponentScore) {
-      updatePlayerPoints($scope, increment);
-    }
-    localStorage.setItem( "game2", JSON.stringify( $scope.gameInfo ) );
-
+    adjustHome($scope, gameNum, increment); 
   };
 
   $scope.adjustOpponentScore = function(increment) {
-    $scope.gameInfo.opponentScore += increment;
-
-    // Only increment if its a lead score point
-    if ($scope.gameInfo.opponentScore > $scope.gameInfo.homeScore) {
-      updatePlayerPoints($scope, increment);
-    }
-    localStorage.setItem( "game2", JSON.stringify( $scope.gameInfo ) );
-
-  };
+    adjustOpponent($scope, gameNum, increment); 
+  }; 
 }
 
 angular.module('vbPointTracker')
