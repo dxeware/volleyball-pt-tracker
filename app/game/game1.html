@@ -1,24 +1,30 @@
 <div class="content" ng-controller="Game1Ctrl">      
   <section>
     <div class="container"> 
-    <div><span class="game-heading">Game 1</span>
-    <button class="btn-primary" ng-click="reset()">Reset</button>
-    </div>
-    <div><span class="team-heading">Valley</span>
-    <input class="points-input" type="number" maxlength="4" ng-model="gameInfo.homeScore">
-    <button class="btn-primary" ng-click="adjustHomeScore(1)">+</button>
-    <button class="btn-primary" ng-click="adjustHomeScore(-1)">-</button></div>
-    <div><span class="team-heading">Other</span>
-    <input class="points-input" type="number" maxlength="4" ng-model="gameInfo.opponentScore">
-    <button class="btn-primary" ng-click="adjustOpponentScore(1)">+</button>
-    <button class="btn-primary" ng-click="adjustOpponentScore(-1)">-</button></div>
-    <br>
+      <div>
+        <span class="game-heading">Game 1</span>
+        <button class="btn-primary" ng-click="reset()">Reset</button>
+      </div>
+      <div>
+        <span class="team-heading">Valley</span>
+        <input class="points-input" type="number" maxlength="4" ng-model="gameInfo.homeScore">
+        <button class="btn-primary" ng-click="adjustHomeScore(1)">+</button>
+        <button class="btn-primary" ng-click="adjustHomeScore(-1)">-</button>
+      </div>
+      <div>
+        <span class="team-heading">Other</span>
+        <input class="points-input" type="number" maxlength="4" ng-model="gameInfo.opponentScore">
+        <button class="btn-primary" ng-click="adjustOpponentScore(1)">+</button>
+        <button class="btn-primary" ng-click="adjustOpponentScore(-1)">-</button>
+      </div>
+      <br>
 
-    <ul data-ng-repeat="player in gameInfo.players">
-      <li><span><input class="check" type="checkbox" data-ng-model="player.playing"></span><span> {{player.number}} {{player.name}} = {{player.points}} pts</span><span class="served"><input class="check" type="checkbox" data-ng-model="player.served"> SERVED</span>
-      </li>
-    </ul>
-  </div>
+      <ul data-ng-repeat="player in gameInfo.players">
+        <li>
+          <span><input class="check" type="checkbox" data-ng-model="player.playing"></span><span> {{player.number}} {{player.name}} = {{player.points}} pts</span><span class="served"><input class="check" type="checkbox" data-ng-model="player.served"> SERVED</span>
+        </li>
+      </ul>
+    </div>
 
   </section>
 </div>
