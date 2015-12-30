@@ -117,6 +117,7 @@ Game1Ctrl.$inject = ['$scope'];
 function Game1Ctrl($scope) {
 
   var gameNum = 'game1';
+  $scope.title = 'Game 1';
 
   initializeGame($scope, gameNum);
 
@@ -138,6 +139,7 @@ Game2Ctrl.$inject = ['$scope'];
 function Game2Ctrl($scope) {
   
   var gameNum = 'game2';
+  $scope.title = 'Game 2';
 
   initializeGame($scope, gameNum);
 

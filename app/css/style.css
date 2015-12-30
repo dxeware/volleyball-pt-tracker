@@ -117,6 +117,10 @@ footer {
   clear: left;
 }
 
+.game-heading {
+  font-size: 28px;
+}
+
 .points {
   background-color: #DBE4C9;
   height: 4rem;
