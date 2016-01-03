@@ -35,7 +35,7 @@ header p {
 .nav > li {
   position: relative;
   display: inline;
-  padding: 0 0.5rem;
+  //padding: 0 0.5rem;
   text-decoration: none;
 }
 
@@ -168,5 +168,6 @@ a:target {
 @media only screen and (max-width: 600px) {
   .navbar {
     font-size: 1.25rem;
+    min-height: 3rem;
   }
 }
